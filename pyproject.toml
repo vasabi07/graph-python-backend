@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "graph"
+version = "0.1.0"
+description = ""
+authors = ["vasabi07 <vasanthanarulselvan@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+langchain = "^0.3.13"
+load-dotenv = "^0.1.0"
+langgraph = "^0.2.60"
+langchain-community = "^0.3.13"
+langchain-openai = "^0.2.14"
+fastapi = "^0.115.6"
+uvicorn = "^0.34.0"
+prisma = "^0.15.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
