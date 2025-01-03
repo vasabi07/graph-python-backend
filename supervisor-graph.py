@@ -14,10 +14,10 @@ from pydantic import BaseModel,Field
 from langchain_community.tools.riza.command import ExecPython
 import pprint
 from langchain_groq import ChatGroq
-groq_api_key = "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"
+
 tavily_tool = TavilySearchResults(max_results=3)
 tool_code_interpreter = PythonREPL()
-llm = ChatGroq(groq_api_key=groq_api_key, model_name="llama-3.3-70b-versatile")
+llm = ChatOpenAI(model="gpt-4o-mini",temperature=0)
 tools = [tavily_tool, tool_code_interpreter]
 class Supervisor(BaseModel):
     next: Literal["enhancer","researcher","coder"] = Field(description="Specifies the next worker in the pipeline: "
